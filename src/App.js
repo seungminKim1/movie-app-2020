@@ -1,6 +1,7 @@
 import React from "react";
 
 //{fav } = props.fav
+
 function Food({ name, from }) {
   return (
     <div>
@@ -12,31 +13,33 @@ function Food({ name, from }) {
 
 const foodILike = [
   {
+    id: 1,
     name: "sushi",
     from: "Japan",
   },
   {
+    id: 2,
     name: "ramen",
     from: "Korea",
   },
   {
+    id: 3,
     name: "taco",
     from: "mexico",
   },
   {
+    id: 4,
     name: "water",
     from: "nature",
   },
 ];
 
+function renderFood(dish) {
+  return <Food id={dish.id} name={dish.name} from={dish.from} />;
+}
+
 function App() {
-  return (
-    <div className="App">
-      {foodILike.map((dish) => (
-        <Food name={dish.name} from={dish.from} />
-      ))}
-    </div>
-  );
+  return <div className="App">{foodILike.map(renderFood)}</div>;
 }
 
 export default App;
