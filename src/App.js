@@ -3,62 +3,28 @@ import PropTypes from "prop-types";
 
 //{fav } = props.fav
 
-const foodILike = [
-  {
-    id: 1,
-    name: "sushi",
-    from: "Japan",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "ramen",
-    from: "Korea",
-    rating: 5,
-  },
-  {
-    id: 3,
-    name: "taco",
-    from: "mexico",
-    rating: 4,
-  },
-  {
-    id: 4,
-    name: "water",
-    from: "nature",
-    rating: 5,
-  },
-];
+class App extends React.Component {
+  state = {
+    count: 0,
+  };
 
-function Food({ name, from, rating }) {
-  return (
-    <div>
-      <h2>I like {name} </h2>
-      <h3>from {from}</h3>
-      <h4>{rating}/5.0</h4>
-    </div>
-  );
+  add = () => {
+    console.log("add");
+  };
+
+  remove = () => {
+    console.log("minus");
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>The number is: {this.state.count}</h1>
+        <button onClick={this.add}>Add</button>
+        <button onClick={this.remove}>Remove</button>
+      </div>
+    );
+  }
 }
-
-Food.propTypes = {
-  name: PropTypes.string.isRequired,
-  from: PropTypes.string.isRequired,
-  rating: PropTypes.number.isRequired,
-};
-
-function App() {
-  return (
-    <div>
-      {foodILike.map((dish) => (
-        <Food
-          key={dish.id}
-          name={dish.name}
-          from={dish.from}
-          rating={dish.rating}
-        />
-      ))}
-    </div>
-  );
-}
-
+//this.add 는 함수 자체를 onClick 프로퍼티에 할당해두는것, this.add() 는 add 함수를 '실행'한 결과를 담는것
 export default App;
