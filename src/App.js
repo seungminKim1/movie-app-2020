@@ -15,7 +15,9 @@ class App extends React.Component {
   remove = () => {
     this.setState((current) => ({ count: current.count - 1 }));
   };
-
+  componentDidUpdate() {
+    console.log("Updated");
+  }
   render() {
     return (
       <div>
