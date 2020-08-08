@@ -9,11 +9,11 @@ class App extends React.Component {
   };
 
   add = () => {
-    console.log("add");
+    this.setState((current) => ({ count: current.count + 1 }));
   };
 
   remove = () => {
-    console.log("minus");
+    this.setState((current) => ({ count: current.count - 1 }));
   };
 
   render() {
