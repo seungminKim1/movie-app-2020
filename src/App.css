@@ -68,6 +68,12 @@ body,
   font-weight: 300;
 }
 
+.movie .movie__title {
+  margin-bottom: 5px;
+  font-size: 24px;
+  color: #2c2c2c;
+}
+
 .movie .movie__genres {
   list-style: none;
   padding: 0;
@@ -78,6 +84,6 @@ body,
 
 .movie__genres li,
 .movie .movie__year {
-  margin-left: 10px;
+  margin-right: 10px;
   font-size: 14px;
 }
