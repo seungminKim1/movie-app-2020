@@ -54,4 +54,4 @@ class Home extends React.Component {
 //this.add 는 함수 자체를 onClick 프로퍼티에 할당해두는것, this.add() 는 add 함수를 '실행'한 결과를 담는것
 //react life cycle
 //state가 필요할 때만 class component
-export default App;
+export default Home;
